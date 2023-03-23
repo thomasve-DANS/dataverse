@@ -71,15 +71,7 @@ This job is automatically scheduled to run once a week at 12:30AM local time on 
 
     * jar tvf $DATAVERSE-WAR-FILENAME | grep ejb-jar.xml
 
-      * if the response includes " WEB-INF/ejb-jar.xml", you will need to extract the ejb-jar.xml file for editing
-
-        * jar xvf $DATAVERSE-WAR-FILENAME WEB-INF/ejb-jar.xml 
-
-          * edit the extracted WEB-INF/ejb-jar.xml, following the :download:`sample file <../_static/admin/ejb-jar.xml>` provided.
-
-        * if the response is empty, create a WEB-INF directory and create en ejb-jar.xml file in it, following the :download:`sample file <../_static/admin/ejb-jar.xml>` provided.
-
-          * edit the parameters in the <schedule> section of the WEB-INF/ejb-jar.xml to suit your preferred schedule
+      * if the response includes " WEB-INF/ejb-jar.xml", you will need to extract the ejb-jar.xml file for editing. jar xvf $DATAVERSE-WAR-FILENAME WEB-INF/ejb-jar.xml. Edit the extracted WEB-INF/ejb-jar.xml, following the :download:`sample file <../_static/admin/ejb-jar.xml>` provided. If the response is empty, create a WEB-INF directory and create en ejb-jar.xml file in it, following the :download:`sample file <../_static/admin/ejb-jar.xml>` provided. Edit the parameters in the <schedule> section of the WEB-INF/ejb-jar.xml to suit your preferred schedule
 
   * Insert the edited WEB-INF/ejb-jar.xml into the dataverse war file
 
